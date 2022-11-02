@@ -1,3 +1,8 @@
 #!bin/bash
-echo "Hello!"
-echo "Hello Devops!"
+read fileName
+if [[ "$fileName" =~ .+\.txt$ ]] 
+then
+cat "$fileName"
+else 
+echo "CAN NOT READ THIS FILE"
+fi
